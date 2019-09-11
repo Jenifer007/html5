@@ -1,0 +1,71 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Event Management</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+	body {
+	border: 6px solid pink; 
+	border-radius: 20px;
+	padding: 1cm;
+	margin: 2cm;             
+	}
+        table {
+            width: 50%;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            var name = document.forms['register']['name'].value;
+            var age = document.forms['register']['age'].value;
+            var email = document.forms['register']['email'].value;
+            if(!name.match(/^[A-Za-z]+$/)) {
+				alert("Name:\t* CHARACTERS ONLY");
+			}
+            if(parseInt(age) < 18) {
+                alert("Age:\t* EQUAL OR GREATER THAN 18");
+            }
+            if(!email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+                alert("Email ID:\t* INVALID EMAIL ID");
+            }
+        }
+    </script>
+</head>
+<body>
+<center>
+    <img src="data:image/jpeg;base64,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">
+        <form name="register" onsubmit="validateForm()">
+            <table >
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" name="name"></td>
+                </tr>
+                <tr>
+                    <td>Age:</td>
+                    <td><input type="text" name="age"></td>
+                </tr>
+                <tr>
+                    <td>Email ID:</td>
+                    <td><input type="text" name="email"></td>
+                </tr>
+                <tr>
+                    <td>City:</td>
+                    <td>
+                        <input list="venue" id="ice-cream-choice" name="ice-cream-choice" />
+                        <datalist id="venue">
+                            <option value="Bangalore">
+                            <option value="Rajkot">
+                            <option value="Vijag">
+                        </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" name="submit" value="Submit"></td>
+                </tr>          
+  </table>
+        </form>
+</center>
+</body>
+</html>
